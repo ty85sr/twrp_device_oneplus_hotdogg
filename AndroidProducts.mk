@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_hotdogv2.mk
+    $(LOCAL_DIR)/twrp_hotdogg.mk
 
-COMMON_LUNCH_CHOICES := twrp_hotdogv2-eng
+COMMON_LUNCH_CHOICES := twrp_hotdogg-eng

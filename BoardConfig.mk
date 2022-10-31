@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/oneplus/hotdogv2
+DEVICE_PATH := device/oneplus/hotdogg
 
 # Architecture
 TARGET_ARCH := arm64
@@ -176,8 +176,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_BIND_SYSTEM := true
 TW_NO_EXFAT_FUSE := true
-TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
+#TW_OVERRIDE_SYSTEM_PROPS := \
+#    "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
     $(TARGET_OUT_EXECUTABLES)/ashmemd
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
@@ -198,3 +198,30 @@ TARGET_RECOVERY_DEVICE_MODULES += debuggerd
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT_EXECUTABLES)/debuggerd
 TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 TW_SCREEN_BLANK_ON_BOOT := true
+
+#SHRP_Variables
+SHRP_PATH := device/neplys/hotdogg
+SHRP_MAINTAINER := ty85sr
+SHRP_DEVICE_CODE := hotdogg
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usbstorage
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A/B
+SHRP_FLASH := 1
+SHRP_EXPRESS := true
+SHRP_DARK := true
+#SHRP_ALT_REBOOT := true
+SHRP_AB := true
+
+#NEWFLAGS
+
+# Including Magisk into recovery ramdisk
+INC_IN_REC_MAGISK := true
+
+# Including default addons into recovery ramdisk
+INC_IN_REC_ADDON_1 := true
+INC_IN_REC_ADDON_2 := true
+INC_IN_REC_ADDON_3 := true
+INC_IN_REC_ADDON_4 := true

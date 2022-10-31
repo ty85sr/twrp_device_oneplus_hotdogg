@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),hotdogv2)
+ifeq ($(TARGET_DEVICE),hotdogg)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
